@@ -13,10 +13,9 @@ const About = () => {
           viewport={{ once: true }}
           className="w-full md:w-2/5 bg-secondary border-2 border-tertiary p-8 flex flex-col items-center justify-center relative shadow-[8px_8px_0px_#E2E8F0] group"
         >
-          <div className="w-full aspect-square bg-slate-100 border-2 border-tertiary flex flex-col items-center justify-center overflow-hidden relative group-hover:border-accentBrand transition-colors duration-300">
-             <div className="absolute inset-0 bg-noise opacity-30 mix-blend-overlay"></div>
-             <span className="font-display font-black text-slate-200 text-6xl opacity-50 absolute top-4 left-4">01</span>
-             <span className="font-display font-bold text-slate-400 uppercase tracking-widest text-sm z-10">INSERT_PHOTO_HERE</span>
+          <div className="w-full aspect-square bg-slate-100 border-2 border-tertiary flex items-center justify-center overflow-hidden relative group-hover:border-accentBrand transition-colors duration-300">
+             <div className="absolute inset-0 bg-noise opacity-30 mix-blend-overlay z-20 pointer-events-none"></div>
+             <img src="/profile.jpeg" alt="Vinayak" className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 z-10" />
           </div>
           <div className="mt-8 text-center uppercase font-display w-full">
             <h3 className="text-slate-900 font-black text-3xl tracking-wider">Vinayak R</h3>
