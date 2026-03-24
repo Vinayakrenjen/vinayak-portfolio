@@ -1,54 +1,94 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const narrativeSteps = [
+  {
+    title: "1. The Spark of Curiosity",
+    text: "My journey began with a persistent question: how do digital systems operate at their core? That curiosity quickly evolved into a rigorous structural pursuit of Computer Science and Engineering at Lovely Professional University, building a rock-solid foundation in algorithms.",
+    color: "border-lvlBrand text-lvlBrand dark:border-lvlCyan dark:text-lvlCyan"
+  },
+  {
+    title: "2. Decoding Machine Learning",
+    text: "Abstract code turned into intelligent systems. I immersed myself in PyTorch, TensorFlow, and Transformers. During extensive training, I mastered the mathematical depths of neural architectures and learned how to train models to understand human language.",
+    color: "border-lvlPurple text-lvlPurple dark:border-lvlPurple dark:text-lvlPurple"
+  },
+  {
+    title: "3. Architecting Systems",
+    text: "Theory demands practice. I transitioned from learning to building—engineering a production-grade NER system for unstructured land records and creating scalable cloud platforms using Google Gemini and LangChain to solve real-world inefficiencies.",
+    color: "border-lvlCyan text-lvlCyan dark:border-lvlBrand dark:text-lvlBrand"
+  },
+  {
+    title: "4. The Ongoing Quest",
+    text: "Driven by discipline and analytical precision, I am constantly leveling up. Beyond simply writing lines of code, my mission is to architect intelligent, data-driven systems that deliver undeniable impact and scale elegantly.",
+    color: "border-slate-800 text-slate-800 dark:border-white dark:text-white"
+  }
+];
+
 const About = () => {
   return (
-    <section id="about" className="py-24 px-8 min-h-[80vh] bg-primary dark:bg-darkPrimary transition-colors duration-300 flex flex-col justify-center relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-stretch gap-8 w-full">
+    <section id="about" className="py-24 px-4 md:px-8 min-h-screen flex flex-col justify-center relative z-10">
+      <div className="max-w-6xl mx-auto w-full">
         
-        {/* Profile Image Bento */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="w-full md:w-2/5 bg-secondary dark:bg-darkSecondary border-2 border-tertiary dark:border-darkTertiary transition-colors duration-300 p-8 flex flex-col items-center justify-center relative shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] group"
+          className="mb-16 md:mb-24"
         >
-          <div className="w-full aspect-square bg-slate-100 dark:bg-darkPrimary border-2 border-tertiary dark:border-darkTertiary flex items-center justify-center overflow-hidden relative group-hover:border-accentBrand dark:group-hover:border-darkAccent transition-colors duration-300">
-             <div className="absolute inset-0 bg-noise opacity-30 mix-blend-overlay z-20 pointer-events-none"></div>
-             <img src="/profile.jpeg" alt="Vinayak" className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 z-10" />
-          </div>
-          <div className="mt-8 text-center uppercase font-display w-full">
-            <h3 className="text-slate-900 dark:text-white font-black text-3xl tracking-wider transition-colors duration-300">Vinayak R</h3>
-            <div className="h-0.5 w-full bg-slate-200 dark:bg-darkTertiary transition-colors duration-300 my-3" />
-            <p className="text-accentBrand dark:text-darkAccent transition-colors duration-300 font-bold text-sm tracking-widest">LPU • B.Tech CSE</p>
-          </div>
+          <span className="text-lvlBrand dark:text-lvlCyan font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Level 1</span>
+          <h2 className="text-5xl md:text-7xl font-black font-display text-slate-900 dark:text-white tracking-tight">
+            Origin Story.
+          </h2>
         </motion.div>
 
-        {/* Biography Bento */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="w-full md:w-3/5 bg-secondary dark:bg-darkSecondary border-2 border-tertiary dark:border-darkTertiary transition-colors duration-300 p-10 md:p-14 shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] flex flex-col justify-center relative overflow-hidden"
-        >
-          <span className="font-display font-black text-[12rem] text-slate-100 dark:text-darkTertiary absolute -right-10 -bottom-20 opacity-50 dark:opacity-30 leading-none pointer-events-none transition-colors duration-300">AB</span>
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch">
           
-          <h2 className="text-5xl md:text-6xl font-black mb-10 font-display text-slate-900 dark:text-white uppercase tracking-tighter relative z-10 transition-colors duration-300">
-            System.<span className="text-accentBrand dark:text-darkAccent transition-colors duration-300">Info</span>
-          </h2>
-          <div className="space-y-6 text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed font-sans font-medium relative z-10 transition-colors duration-300">
-            <p>
-              I am a driven Computer Science and Engineering student at <span className="text-slate-900 dark:text-white transition-colors duration-300 font-bold">Lovely Professional University</span> (CGPA 8.58) with a strong foundation in algorithm design and data structures.
-            </p>
-            <p>
-              My passion lies deeply rooted in <span className="text-accentCyan dark:text-darkCyan font-bold transition-colors duration-300">Artificial Intelligence</span> and <span className="text-accentBrand dark:text-darkPurple font-bold transition-colors duration-300">Machine Learning</span>. From developing highly accurate NLP models using PyTorch, to implementing advanced Named Entity Recognition systems, and leveraging LLMs like Google Gemini.
-            </p>
-            <p>
-              Beyond coding, I am an adaptable problem solver, an enthusiastic team player, and have led community initiatives to bridge the digital divide for underprivileged students. I am currently open for full-time roles.
-            </p>
-          </div>
-        </motion.div>
+          {/* Glass Image Container */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-1/3 glass-panel p-3 rounded-3xl relative group flex flex-col shadow-2xl"
+          >
+             <div className="w-full h-full min-h-[400px] rounded-2xl overflow-hidden relative">
+               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10 mix-blend-multiply opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
+               <img src="/profile.jpeg" alt="Vinayak R Dinesh" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+               <div className="absolute bottom-6 left-6 z-20">
+                 <h3 className="text-white font-display font-bold text-2xl tracking-wide">Vinayak R</h3>
+                 <p className="text-lvlCyan font-medium text-sm tracking-widest uppercase mt-1">LPU • B.Tech CSE</p>
+               </div>
+             </div>
+          </motion.div>
+
+          {/* Narrative Timeline Container */}
+          <motion.div className="w-full lg:w-2/3 space-y-12 relative py-4">
+             {/* Subtle vertical connection line */}
+             <div className="absolute left-[15px] top-4 bottom-4 w-px bg-gradient-to-b from-lvlBrand via-lvlPurple to-transparent dark:from-lvlCyan dark:via-lvlPurple opacity-30 hidden md:block"></div>
+
+             {narrativeSteps.map((step, idx) => (
+               <motion.div 
+                 key={idx}
+                 initial={{ opacity: 0, x: -20 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: idx * 0.15, type: "spring", stiffness: 100 }}
+                 className="relative pl-0 md:pl-16 group"
+               >
+                 {/* Node dot */}
+                 <div className="absolute left-0 top-1.5 w-8 h-8 rounded-full bg-lvlPrimary dark:bg-darkLvlPrimary border-2 border-slate-300 dark:border-slate-700 group-hover:border-lvlBrand dark:group-hover:border-lvlCyan hidden md:flex items-center justify-center transform -translate-x-1/2 transition-colors duration-300 z-10">
+                   <div className="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-lvlBrand dark:group-hover:bg-lvlCyan transition-colors duration-300" />
+                 </div>
+                 
+                 <h3 className={`text-xl md:text-2xl font-bold font-display mb-3 ${step.color} transition-colors duration-300 tracking-wide`}>
+                   {step.title}
+                 </h3>
+                 <p className="text-slate-600 dark:text-slate-400 font-sans leading-relaxed text-lg">
+                   {step.text}
+                 </p>
+               </motion.div>
+             ))}
+          </motion.div>
+        </div>
 
       </div>
     </section>

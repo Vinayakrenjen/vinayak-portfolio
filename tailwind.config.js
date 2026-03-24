@@ -4,26 +4,28 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class', // Enable class-based dark mode toggling
+  darkMode: 'class', 
   theme: {
     extend: {
       colors: {
-        primary: "#F4F4F5", // Light neutral base
-        secondary: "#FFFFFF", // White bento boxes
-        tertiary: "#D4D4D8", // Neutral borders
-        accentBrand: "#4F46E5", // Vibrant Indigo
-        accentCyan: "#0EA5E9", // Sky Blue
-        accentPurple: "#7C3AED", // Violet
-        darkPrimary: "#0A0A0A", // Very deep grey for dark mode
-        darkSecondary: "#121212", // Dark bento boxes
-        darkTertiary: "#1E1E1E", // Dark borders
-        darkAccent: "#EAB308", // Golden yellow for dark
-        darkCyan: "#06b6d4",
-        darkPurple: "#8b5cf6",
+        // Light Theme Core 
+        lvlPrimary: "#FAFAFA",
+        lvlSecondary: "rgba(255, 255, 255, 0.7)",
+        lvlTertiary: "#E2E8F0",
+        
+        // Brand Colors
+        lvlBrand: "#3B82F6", // Blue
+        lvlCyan: "#06B6D4",
+        lvlPurple: "#8B5CF6",
+
+        // Dark Theme Core (Strictly avoiding #000000)
+        darkLvlPrimary: "#0F172A", // Deep Slate 900
+        darkLvlSecondary: "rgba(30, 41, 59, 0.7)", // Glass Slate 800
+        darkLvlTertiary: "#334155", // Slate 700
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Space Grotesk', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
       }
     },
   },
