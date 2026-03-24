@@ -44,7 +44,7 @@ const Impact = () => {
                viewport={{ once: true }}
                transition={{ type: "spring", stiffness: 400, damping: 25 }}
                className="bg-secondary dark:bg-darkSecondary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary p-8 md:p-10 shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] group flex flex-col justify-between cursor-pointer hover:border-accentCyan dark:hover:border-darkCyan relative overflow-hidden"
-               onClick={() => setSelectedImage('/newspaper-clipping.jpg')}
+               onClick={() => setSelectedImage('/newspaper-clipping.jpeg')}
             >
                <div className="absolute -right-10 -bottom-10 opacity-5 dark:opacity-10 text-[10rem] font-display font-black text-slate-900 dark:text-white pointer-events-none rotate-12 transition-colors">PRESS</div>
                
@@ -62,7 +62,7 @@ const Impact = () => {
                <div className="w-full h-48 md:h-64 bg-slate-200 dark:bg-darkPrimary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary overflow-hidden relative flex items-center justify-center mt-auto">
                   <div className="absolute inset-0 bg-noise opacity-30 mix-blend-overlay z-20 pointer-events-none"></div>
                   <img 
-                    src="/newspaper-clipping.jpg" 
+                    src="/newspaper-clipping.jpeg" 
                     alt="Newspaper Feature" 
                     className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 z-10 scale-105 group-hover:scale-100" 
                     onError={(e) => { 
