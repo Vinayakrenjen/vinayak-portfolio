@@ -10,6 +10,7 @@ import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Marquee from './components/Marquee';
+import Impact from './components/Impact';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -209,6 +210,7 @@ function App() {
         
         <Projects />
         <Certificates />
+        <Impact />
         <Education />
         <Contact />
       </main>

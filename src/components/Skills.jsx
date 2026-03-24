@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 const skillCategories = [
   {
     title: 'Languages',
-    skills: ['Python', 'Java', 'C++', 'C', 'JavaScript', 'HTML/CSS']
+    skills: ['Python', 'Java', 'C++', 'C', 'JavaScript']
   },
   {
-    title: 'Machine Learning',
-    skills: ['PyTorch', 'Transformers', 'Scikit-learn', 'NLP (NER)', 'Models']
+    title: 'Frameworks & Libs',
+    skills: ['TensorFlow', 'Scikit-learn', 'PyTorch', 'Pandas', 'NumPy', 'Matplotlib', 'Streamlit']
   },
   {
-    title: 'Data Science',
-    skills: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'EDA']
+    title: 'Tools & Platforms',
+    skills: ['Docker', 'Git/GitHub', 'MySQL', 'Blue Prism', 'N8N', 'Anaconda']
   },
   {
-    title: 'Tools & APIs',
-    skills: ['Streamlit', 'MySQL', 'Git/GitHub', 'Google Gemini API']
+    title: 'Soft Skills',
+    skills: ['Problem-Solving', 'Resilience', 'Adaptability', 'Communication', 'Team Player']
   }
 ];
 
@@ -46,7 +46,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.03, y: -5 }}
               viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25, delay: idx * 0.1 }}
               className="bg-secondary dark:bg-darkSecondary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary p-8 cursor-default group hover:border-accentBrand dark:hover:border-darkAccent shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] hover:shadow-[12px_12px_0px_#4F46E5] dark:hover:shadow-[12px_12px_0px_#EAB308]"
             >
               <h3 className="text-2xl font-black font-display text-slate-900 dark:text-white transition-colors duration-300 uppercase tracking-wider mb-6 pb-4 border-b-2 border-tertiary dark:border-darkTertiary">
@@ -65,6 +65,23 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* DSA Achievement Banner */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          whileHover={{ y: -5, scale: 1.02 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 400, damping: 25, delay: 0.5 }}
+          className="mt-10 bg-accentBrand dark:bg-darkAccent text-white dark:text-darkPrimary border-2 border-accentBrand dark:border-darkAccent p-6 md:p-8 flex flex-col md:flex-row items-center justify-center gap-6 shadow-[8px_8px_0px_#93C5FD] dark:shadow-[8px_8px_0px_#EAB308] cursor-default"
+        >
+           <span className="text-4xl md:text-5xl">🏆</span>
+           <div className="text-center md:text-left">
+              <h4 className="font-display font-black text-2xl md:text-3xl uppercase tracking-wider">Algorithmic Problem Solving</h4>
+              <p className="font-display font-bold tracking-widest uppercase mt-2 opacity-90 text-sm md:text-base">Successfully solved 200+ DSA problems across various coding platforms.</p>
+           </div>
+        </motion.div>
+
       </div>
     </section>
   );

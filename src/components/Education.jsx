@@ -11,12 +11,20 @@ const educationData = [
     titleColor: 'text-accentBrand dark:text-darkAccent'
   },
   {
-    role: 'ML Made Easy: From Basics to Application',
-    company: 'Lovely Professional University (Training)',
+    role: 'Training in Machine Learning',
+    company: 'Lovely Professional University',
     duration: 'June 2025 - July 2025',
-    description: 'Mastered foundational ML and Deep Learning (CNNs, RNNs, Transformers). Acquired deep operational knowledge of GenAI ecosystems (GPT, Claude, Gemini) and implemented end-to-end workflows using PyTorch, LangChain, and RAG architectures.',
+    description: 'Mastered foundational ML and deep learning methodologies. Acquired operational knowledge of modern GenAI ecosystems and implemented end-to-end workflows using PyTorch and LangChain.',
     color: 'border-accentCyan dark:border-darkCyan',
     titleColor: 'text-accentCyan dark:text-darkCyan'
+  },
+  {
+    role: 'Intermediate Education',
+    company: 'Pallikoodam School, Kerala',
+    duration: 'June 2020 - March 2022',
+    description: 'Completed higher secondary education with a strong academic tracking record, achieving a score of 95%.',
+    color: 'border-accentPurple dark:border-darkPurple',
+    titleColor: 'text-accentPurple dark:text-darkPurple'
   }
 ];
 
