@@ -41,16 +41,16 @@ const About = () => {
           </h2>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
           
           {/* Glass Image Container */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/3 glass-panel p-3 rounded-3xl relative group flex flex-col shadow-2xl"
+            className="w-full lg:w-1/3 lg:sticky lg:top-32 glass-panel p-3 rounded-3xl relative group flex flex-col shadow-2xl"
           >
-             <div className="w-full h-full min-h-[400px] rounded-2xl overflow-hidden relative">
+             <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden relative">
                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10 mix-blend-multiply opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
                <img src="/profile.jpeg" alt="Vinayak R Dinesh" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                <div className="absolute bottom-6 left-6 z-20">
