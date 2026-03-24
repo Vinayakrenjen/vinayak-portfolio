@@ -8,7 +8,7 @@ const projectsList = [
     approach: 'Trained a PyTorch BiLSTM-CRF model. Engineered a robust data generation pipeline using Combinatorial Grammars to synthesize 15,000+ training samples. Leveraged GloVe embeddings for targeted semantic learning.',
     outcome: 'Successfully resolved complex linguistic edge cases, including passive voice ambiguity and date/cost confusion, with extremely high precision.',
     tech: ['Python', 'PyTorch', 'GloVe', 'Streamlit'],
-    github: 'https://github.com/Vinayakrenjen',
+    github: 'https://github.com/Vinayakrenjen/LandRecord_NER',
     live: '#',
   },
   {
@@ -17,7 +17,7 @@ const projectsList = [
     approach: 'Integrated Google Gemini multimodal capabilities with local hardware GPU acceleration targeting the NVIDIA RTX 4050.',
     outcome: 'Enabled high-performance, real-time conversational analysis over direct video feeds with zero-latency querying.',
     tech: ['Google Gemini', 'Python', 'Computer Vision'],
-    github: 'https://github.com/Vinayakrenjen',
+    github: 'https://github.com/Vinayakrenjen/RealityLens',
     live: '#',
   },
   {
@@ -26,7 +26,7 @@ const projectsList = [
     approach: 'Engineered a hybrid feature extraction pipeline synthesizing Flesch-Kincaid readability metrics with Sentence Transformers embeddings. Clustered via Gaussian Mixture Models (GMM).',
     outcome: 'Devised a continuous 0-10 difficulty scoring algorithm validated against the massive 97k+ RACE dataset with exceptional alignment.',
     tech: ['Hugging Face', 'Scikit-learn', 'NLP', 'GMM'],
-    github: 'https://github.com/Vinayakrenjen',
+    github: 'https://github.com/Vinayakrenjen/question-difficulty-scoring',
     live: '#',
   },
   {
@@ -35,7 +35,7 @@ const projectsList = [
     approach: 'Integrated a highly context-aware Pandas data processing pipeline with LLMs for intelligent log interpretation and real-time conversation state tracking.',
     outcome: 'Streamlined the identification of idle resources, drastically improving multi-cloud infrastructure efficiency through interactive data-driven insights.',
     tech: ['Streamlit', 'Gemini API', 'Pandas'],
-    github: 'https://github.com/Vinayakrenjen',
+    github: 'https://github.com/Vinayakrenjen/Opticloud',
     live: '#',
   }
 ];
