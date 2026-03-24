@@ -34,7 +34,7 @@ const projectsList = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-8 min-h-screen bg-primary relative z-10 border-t-2 border-tertiary mt-24">
+    <section id="projects" className="py-24 px-8 min-h-screen bg-primary dark:bg-darkPrimary transition-colors duration-300 relative z-10 border-t-2 border-tertiary dark:border-darkTertiary mt-24">
       <div className="max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,12 +43,12 @@ const Projects = () => {
           className="mb-16"
         >
           <div className="flex items-center gap-6 mb-4">
-            <h2 className="text-6xl md:text-8xl font-black font-display text-slate-900 uppercase tracking-tighter leading-none">
+            <h2 className="text-6xl md:text-8xl font-black font-display text-slate-900 dark:text-white transition-colors duration-300 uppercase tracking-tighter leading-none">
               Selected
             </h2>
-            <div className="h-2 flex-grow bg-accentBrand hidden md:block"></div>
+            <div className="h-2 flex-grow bg-accentBrand dark:bg-darkAccent transition-colors duration-300 hidden md:block"></div>
           </div>
-          <h2 className="text-6xl md:text-8xl font-black font-display text-tertiary uppercase tracking-tighter leading-none">
+          <h2 className="text-6xl md:text-8xl font-black font-display text-tertiary dark:text-darkTertiary transition-colors duration-300 uppercase tracking-tighter leading-none">
             Projects.
           </h2>
         </motion.div>
@@ -61,24 +61,24 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-secondary border-2 border-tertiary p-8 md:p-12 shadow-[8px_8px_0px_#E2E8F0] group hover:border-slate-400 transition-colors flex flex-col h-full"
+              className="bg-secondary dark:bg-darkSecondary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary p-8 md:p-12 shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] group hover:border-slate-400 dark:hover:border-slate-500 flex flex-col h-full"
             >
               <div className="flex justify-between items-start mb-8">
-                <span className="font-display font-black text-4xl text-tertiary group-hover:text-accentBrand transition-colors">
+                <span className="font-display font-black text-4xl text-tertiary dark:text-darkTertiary transition-colors duration-300 group-hover:text-accentBrand dark:group-hover:text-darkAccent">
                   0{idx + 1}
                 </span>
                 <div className="flex gap-4">
-                  <a href={project.github} className="text-slate-500 hover:text-slate-900 font-display uppercase text-sm tracking-widest font-bold underline decoration-2 underline-offset-8">Code</a>
-                  <a href={project.live} className="text-slate-500 hover:text-slate-900 font-display uppercase text-sm tracking-widest font-bold underline decoration-2 underline-offset-8">Live</a>
+                  <a href={project.github} className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 font-display uppercase text-sm tracking-widest font-bold underline decoration-2 underline-offset-8">Code</a>
+                  <a href={project.live} className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 font-display uppercase text-sm tracking-widest font-bold underline decoration-2 underline-offset-8">Live</a>
                 </div>
               </div>
               
-              <h3 className="text-3xl font-black font-display text-slate-900 uppercase tracking-wide mb-6">{project.title}</h3>
-              <p className="text-slate-600 font-medium text-lg mb-10 flex-grow">{project.description}</p>
+              <h3 className="text-3xl font-black font-display text-slate-900 dark:text-white transition-colors duration-300 uppercase tracking-wide mb-6">{project.title}</h3>
+              <p className="text-slate-600 dark:text-slate-400 transition-colors duration-300 font-medium text-lg mb-10 flex-grow">{project.description}</p>
               
-              <div className="flex flex-wrap gap-2 mt-auto pt-8 border-t-2 border-tertiary">
+              <div className="flex flex-wrap gap-2 mt-auto pt-8 border-t-2 border-tertiary dark:border-darkTertiary transition-colors duration-300">
                 {project.tech.map((tech, i) => (
-                  <span key={i} className="px-4 py-2 bg-primary text-slate-700 font-display font-bold uppercase tracking-widest text-xs border border-tertiary">
+                  <span key={i} className="px-4 py-2 bg-primary dark:bg-darkPrimary transition-colors duration-300 text-slate-700 dark:text-slate-300 font-display font-bold uppercase tracking-widest text-xs border border-tertiary dark:border-darkTertiary">
                     {tech}
                   </span>
                 ))}

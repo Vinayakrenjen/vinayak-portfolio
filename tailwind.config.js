@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', // Enable class-based dark mode toggling
   theme: {
     extend: {
       colors: {
@@ -13,6 +14,12 @@ export default {
         accentBrand: "#4F46E5", // Vibrant Indigo
         accentCyan: "#0EA5E9", // Sky Blue
         accentPurple: "#7C3AED", // Violet
+        darkPrimary: "#0A0A0A", // Very deep grey for dark mode
+        darkSecondary: "#121212", // Dark bento boxes
+        darkTertiary: "#1E1E1E", // Dark borders
+        darkAccent: "#EAB308", // Golden yellow for dark
+        darkCyan: "#06b6d4",
+        darkPurple: "#8b5cf6",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

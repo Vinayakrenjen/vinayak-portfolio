@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Marquee = ({ text, reverse = false, colorClass = "bg-accentBrand text-primary border-accentBrand" }) => {
+const Marquee = ({ text, reverse = false, colorClass = "bg-accentBrand dark:bg-darkAccent text-primary dark:text-darkPrimary border-accentBrand dark:border-darkAccent" }) => {
   // Duplicate text massively to ensure seamless inf scrolling
   const fullText = Array(15).fill(text).join(" • ");
   
   return (
-    <div className={`w-full overflow-hidden py-4 border-y-2 z-20 relative transform ${reverse ? 'rotate-1' : '-rotate-1'} scale-105 my-12 ${colorClass}`}>
+    <div className={`w-full overflow-hidden py-4 border-y-2 z-20 relative transform ${reverse ? 'rotate-1' : '-rotate-1'} scale-105 my-12 transition-colors duration-300 ${colorClass}`}>
       <motion.div 
         className="flex whitespace-nowrap font-display font-black text-3xl tracking-widest uppercase"
         animate={{ x: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}

@@ -9,8 +9,11 @@
     scroll-behavior: smooth;
     background-color: #F4F4F5;
   }
+  html.dark {
+    background-color: #0A0A0A;
+  }
   body {
-    @apply text-slate-600 font-sans antialiased;
+    @apply text-slate-600 dark:text-slate-400 font-sans antialiased transition-colors duration-300;
   }
 }
 
@@ -19,4 +22,9 @@
   mix-blend-mode: multiply;
   opacity: 0.05;
   pointer-events: none;
+}
+
+html.dark .bg-noise {
+  mix-blend-mode: soft-light;
+  opacity: 0.15;
 }
