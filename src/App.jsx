@@ -135,7 +135,7 @@ function App() {
           {/* Glowing Neural Core */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-br from-lvlBrand/20 to-lvlPurple/20 dark:from-lvlCyan/10 dark:to-lvlPurple/10 blur-[90px] md:blur-[120px] rounded-full z-0 pointer-events-none transition-colors duration-1000 animate-pulse"></div>
 
-          <motion.div className="z-10 mt-16 md:mt-20 relative flex flex-col items-center max-w-5xl mx-auto w-full">
+          <motion.div className="z-10 mt-16 md:mt-20 relative flex flex-col items-center max-w-5xl mx-auto w-full pb-24 md:pb-32">
             
             <motion.div 
                initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -195,7 +195,7 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
             transition={{ delay: 3, duration: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center hidden sm:flex pointer-events-none"
+            className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center hidden sm:flex pointer-events-none scale-90 md:scale-100"
           >
             <div className="w-6 h-10 border-2 border-slate-400 dark:border-slate-500 rounded-full flex justify-center p-1">
               <motion.div 
