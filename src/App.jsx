@@ -180,13 +180,16 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.2, duration: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center w-full sm:w-auto"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 justify-center items-center w-full"
             >
-              <a href="#projects" className="px-8 py-4 glass-panel bg-gradient-to-r from-lvlBrand to-lvlPurple hover:from-lvlPurple hover:to-lvlCyan text-white font-display font-medium rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+              <a href="#projects" className="px-8 py-4 w-full sm:w-auto text-center glass-panel bg-gradient-to-r from-lvlBrand to-lvlPurple hover:from-lvlPurple hover:to-lvlCyan text-white font-display font-medium rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
                 View Missions (Projects)
               </a>
-              <a href="#contact" className="px-8 py-4 glass-panel hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-display font-medium rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-1 transform group flex items-center justify-center gap-2">
+              <a href="#contact" className="px-8 py-4 w-full sm:w-auto text-center glass-panel hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-white font-display font-medium rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-1 transform group flex items-center justify-center gap-2">
                 Let's Connect <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+              <a href="/resume.pdf" download="Vinayak_R_Dinesh_Resume.pdf" className="px-8 py-4 w-full sm:w-auto text-center glass-panel border border-lvlBrand/30 hover:border-lvlBrand/60 text-lvlBrand dark:text-lvlCyan font-display font-medium rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-1 transform group flex items-center justify-center gap-2">
+                <svg className="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg> Download CV
               </a>
             </motion.div>
           </motion.div>
