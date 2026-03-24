@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const certificates = [
@@ -72,8 +73,9 @@ const Certificates = () => {
       </section>
 
       {/* Full-Screen Image Modal */}
-      <AnimatePresence>
-        {selectedCert && (
+      {createPortal(
+        <AnimatePresence>
+          {selectedCert && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -115,8 +117,10 @@ const Certificates = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </>
   );
 };

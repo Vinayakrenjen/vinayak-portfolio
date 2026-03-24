@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const hobbies = [
@@ -123,8 +124,9 @@ const Impact = () => {
       </section>
 
       {/* Full-Screen Newspaper Modal */}
-      <AnimatePresence>
-        {selectedImage && (
+      {createPortal(
+        <AnimatePresence>
+          {selectedImage && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -160,8 +162,10 @@ const Impact = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </>
   );
 };
