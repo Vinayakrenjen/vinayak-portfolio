@@ -119,7 +119,7 @@ function App() {
       <main>
         <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center p-8 relative">
           
-          <motion.div className="z-10 mt-20 relative">
+          <motion.div className="z-10 mt-16 md:mt-24 relative pb-20 md:pb-32">
             <h2 className="text-6xl md:text-8xl font-black font-display text-slate-900 dark:text-white mb-6 tracking-tighter uppercase leading-none drop-shadow-sm transition-colors cursor-default">
               {"VINAYAK".split("").map((char, index) => (
                 <motion.span 
@@ -133,19 +133,14 @@ function App() {
                 </motion.span>
               ))}
               <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentBrand to-accentCyan dark:from-slate-300 dark:to-slate-100">
-                {"R DINESH".split("").map((char, index) => (
-                  <motion.span 
-                    key={`r-${index}`} 
-                    initial={{ opacity: 0, scale: 0.5, filter: "blur(10px)" }} 
-                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
-                    transition={{ delay: 0.5 + index * 0.05, duration: 0.4 }}
-                    className="inline-block"
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-              </span>
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }} 
+                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-accentBrand to-accentCyan dark:from-slate-300 dark:to-slate-100"
+              >
+                R DINESH
+              </motion.span>
             </h2>
             <motion.h3 
               initial={{ opacity: 0 }}
@@ -180,12 +175,12 @@ function App() {
 
           {/* Animated Scroll Indicator */}
           <motion.div 
-            animate={{ y: [0, 15, 0] }} 
+            animate={{ y: [0, 10, 0] }} 
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-70"
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-60 hidden sm:flex"
           >
-            <span className="text-xs font-display font-bold tracking-widest uppercase mb-3 text-slate-400">Scroll</span>
-            <div className="w-px h-16 bg-slate-300 dark:bg-slate-700 overflow-hidden relative">
+            <span className="text-[10px] font-display font-bold tracking-widest uppercase mb-2 text-slate-400">Scroll</span>
+            <div className="w-px h-10 bg-slate-300 dark:bg-slate-700 overflow-hidden relative">
               <motion.div 
                 animate={{ y: ["-100%", "100%"] }} 
                 transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
