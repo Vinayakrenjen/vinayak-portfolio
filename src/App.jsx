@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Impact from './components/Impact';
 import Training from './components/Training';
+import Journey from './components/Journey';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -216,6 +217,7 @@ function App() {
         <Education />
         <Certificates />
         <Impact />
+        <Journey />
         <Contact />
       </main>
 
