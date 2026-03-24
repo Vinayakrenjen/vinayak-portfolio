@@ -17,7 +17,7 @@ const NetworkBackground = () => {
     window.addEventListener('resize', setCanvasSize);
 
     const particles = [];
-    const particleCount = typeof window !== 'undefined' && window.innerWidth < 768 ? 40 : 80;
+    const particleCount = typeof window !== 'undefined' && window.innerWidth < 768 ? 60 : 120;
     
     // Check if dark mode is active for color setting
     const isDark = document.documentElement.classList.contains('dark');
@@ -43,7 +43,7 @@ const NetworkBackground = () => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         // Soft blue/cyan nodes
-        ctx.fillStyle = isDark ? 'rgba(6, 182, 212, 0.4)' : 'rgba(59, 130, 246, 0.4)';
+        ctx.fillStyle = isDark ? 'rgba(6, 182, 212, 0.6)' : 'rgba(59, 130, 246, 0.6)';
         ctx.fill();
       }
     }
@@ -67,8 +67,8 @@ const NetworkBackground = () => {
 
           if (distance < 150) {
             ctx.beginPath();
-            // Lines are very faint
-            const opacity = (1 - distance / 150) * 0.15;
+            // Lines visibility increased
+            const opacity = (1 - distance / 150) * 0.4;
             ctx.strokeStyle = _isDark ? `rgba(139, 92, 246, ${opacity})` : `rgba(59, 130, 246, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -92,7 +92,7 @@ const NetworkBackground = () => {
     <canvas 
       ref={canvasRef} 
       className="fixed inset-0 w-full h-full pointer-events-none z-0" 
-      style={{ opacity: 0.8 }}
+      style={{ opacity: 1 }}
     />
   );
 };
