@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { FiSun, FiMoon } from 'react-icons/fi';
+import Cursor from './components/Cursor';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -17,7 +18,6 @@ function App() {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   useEffect(() => {
-    // Check user preference on load
     const saved = localStorage.getItem('theme');
     if (saved === 'dark') {
       setIsDarkMode(true);
@@ -68,8 +68,10 @@ function App() {
   const navLinks = ['About', 'Skills', 'Projects', 'Certificates', 'Contact'];
 
   return (
-    <div className="min-h-screen bg-primary dark:bg-darkPrimary font-sans text-slate-700 dark:text-slate-300 relative selection:bg-accentBrand dark:selection:bg-darkAccent selection:text-white dark:selection:text-darkPrimary transition-colors duration-300">
+    <div className="min-h-screen bg-primary dark:bg-darkPrimary font-sans text-slate-700 dark:text-slate-300 relative selection:bg-accentBrand dark:selection:bg-darkAccent selection:text-white dark:selection:text-darkPrimary transition-colors duration-300 overflow-x-hidden">
       
+      <Cursor />
+
       {/* Global Grain Texture Overlay */}
       <div className="fixed inset-0 z-50 bg-noise pointer-events-none" />
 
@@ -104,7 +106,6 @@ function App() {
             })}
           </nav>
 
-          {/* Theme Toggle Button */}
           <button 
             onClick={toggleTheme}
             className="p-2 rounded-full border-2 border-tertiary dark:border-darkTertiary bg-secondary dark:bg-darkSecondary text-slate-600 dark:text-slate-300 hover:border-accentBrand dark:hover:border-darkAccent hover:text-accentBrand dark:hover:text-darkAccent transition-all shadow-[4px_4px_0px_#E2E8F0] dark:shadow-[4px_4px_0px_#1E1E1E] active:translate-y-1 active:translate-x-1 active:shadow-none"
@@ -116,33 +117,93 @@ function App() {
       </header>
 
       <main>
-        <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center p-8 relative overflow-hidden">
+        <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center p-8 relative">
           
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="z-10 mt-20"
-          >
-            <h2 className="text-6xl md:text-8xl font-black font-display text-slate-900 dark:text-white mb-6 tracking-tighter uppercase leading-none drop-shadow-sm transition-colors">
-              Vinayak<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-accentBrand to-accentCyan dark:from-slate-500 dark:to-slate-200">R Dinesh</span>
+          <motion.div className="z-10 mt-20 relative">
+            <h2 className="text-6xl md:text-8xl font-black font-display text-slate-900 dark:text-white mb-6 tracking-tighter uppercase leading-none drop-shadow-sm transition-colors cursor-default">
+              {"VINAYAK".split("").map((char, index) => (
+                <motion.span 
+                  key={`v-${index}`} 
+                  initial={{ opacity: 0, y: 50 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  transition={{ delay: index * 0.1, duration: 0.5, type: "spring", stiffness: 100 }}
+                  className="inline-block hover:text-accentBrand dark:hover:text-darkAccent transition-colors duration-200"
+                >
+                  {char}
+                </motion.span>
+              ))}
+              <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentBrand to-accentCyan dark:from-slate-300 dark:to-slate-100">
+                {"R DINESH".split("").map((char, index) => (
+                  <motion.span 
+                    key={`r-${index}`} 
+                    initial={{ opacity: 0, scale: 0.5, filter: "blur(10px)" }} 
+                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} 
+                    transition={{ delay: 0.5 + index * 0.05, duration: 0.4 }}
+                    className="inline-block"
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </motion.span>
+                ))}
+              </span>
             </h2>
-            <h3 className="text-xl md:text-2xl text-accentBrand dark:text-darkAccent font-display font-bold mb-8 tracking-widest uppercase transition-colors">Machine Learning & AI Engineer</h3>
-            <p className="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-2xl mx-auto font-medium transition-colors">
+            <motion.h3 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+              className="text-xl md:text-2xl text-accentBrand dark:text-darkAccent font-display font-bold mb-8 tracking-widest uppercase transition-colors"
+            >
+              Machine Learning & AI Engineer
+            </motion.h3>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 0.8 }}
+              className="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-2xl mx-auto font-medium transition-colors"
+            >
               Building intelligent applications. Leveraging Data Science, Machine Learning, and GenAI to solve high-impact real-world problems.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="#projects" className="px-10 py-5 bg-accentBrand dark:bg-darkAccent text-white dark:text-darkPrimary font-display font-black uppercase tracking-wider hover:bg-slate-900 dark:hover:bg-white transition-colors shadow-[6px_6px_0px_#93C5FD] dark:shadow-none">
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 0.5 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center"
+            >
+              <a href="#projects" className="px-10 py-5 bg-accentBrand dark:bg-darkAccent text-white dark:text-darkPrimary font-display font-black uppercase tracking-wider hover:bg-slate-900 dark:hover:bg-white transition-all shadow-[6px_6px_0px_#93C5FD] dark:shadow-none hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
                 View Projects
               </a>
-              <a href="#contact" className="px-10 py-5 bg-white dark:bg-transparent text-slate-900 dark:text-white border-2 border-slate-300 dark:border-darkTertiary font-display font-black uppercase tracking-wider hover:border-slate-900 dark:hover:border-slate-400 transition-colors shadow-[6px_6px_0px_#E2E8F0] dark:shadow-none">
+              <a href="#contact" className="px-10 py-5 bg-white dark:bg-transparent text-slate-900 dark:text-white border-2 border-slate-300 dark:border-darkTertiary font-display font-black uppercase tracking-wider hover:border-slate-900 dark:hover:border-slate-400 transition-all shadow-[6px_6px_0px_#E2E8F0] dark:shadow-none hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
                 Let's Connect
               </a>
+            </motion.div>
+          </motion.div>
+
+          {/* Animated Scroll Indicator */}
+          <motion.div 
+            animate={{ y: [0, 15, 0] }} 
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-70"
+          >
+            <span className="text-xs font-display font-bold tracking-widest uppercase mb-3 text-slate-400">Scroll</span>
+            <div className="w-px h-16 bg-slate-300 dark:bg-slate-700 overflow-hidden relative">
+              <motion.div 
+                animate={{ y: ["-100%", "100%"] }} 
+                transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+                className="w-full h-full bg-accentBrand dark:bg-darkAccent absolute top-0" 
+              />
             </div>
           </motion.div>
 
-          <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accentCyan/10 dark:bg-darkCyan/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-colors" />
-          <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-accentPurple/10 dark:bg-darkPurple/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none transition-colors" />
+          <motion.div 
+            animate={{ scale: [1, 1.05, 1], rotate: [0, 2, -2, 0] }}
+            transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+            className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accentCyan/10 dark:bg-darkCyan/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-colors" 
+          />
+          <motion.div 
+            animate={{ scale: [1, 1.1, 1], rotate: [0, -3, 3, 0] }}
+            transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+            className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-accentPurple/10 dark:bg-darkPurple/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none transition-colors" 
+          />
         </section>
 
         <Marquee text="Machine Learning • AI • Data Science" reverse={false} colorClass="bg-accentBrand dark:bg-darkAccent text-white dark:text-darkPrimary border-accentBrand dark:border-darkAccent" />

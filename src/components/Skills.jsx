@@ -44,9 +44,10 @@ const Skills = () => {
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.03, y: -5 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-secondary dark:bg-darkSecondary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary p-8 shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] hover:shadow-[8px_8px_0px_#4F46E5] dark:hover:shadow-[8px_8px_0px_#EAB308] hover:-translate-y-1 hover:-translate-x-1"
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="bg-secondary dark:bg-darkSecondary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary p-8 cursor-default group hover:border-accentBrand dark:hover:border-darkAccent shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] hover:shadow-[12px_12px_0px_#4F46E5] dark:hover:shadow-[12px_12px_0px_#EAB308]"
             >
               <h3 className="text-2xl font-black font-display text-slate-900 dark:text-white transition-colors duration-300 uppercase tracking-wider mb-6 pb-4 border-b-2 border-tertiary dark:border-darkTertiary">
                 {category.title}

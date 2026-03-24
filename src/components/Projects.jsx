@@ -59,9 +59,10 @@ const Projects = () => {
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.02 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-secondary dark:bg-darkSecondary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary p-8 md:p-12 shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] group hover:border-slate-400 dark:hover:border-slate-500 flex flex-col h-full"
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="bg-secondary dark:bg-darkSecondary transition-colors duration-300 border-2 border-tertiary dark:border-darkTertiary p-8 md:p-12 shadow-[8px_8px_0px_#E2E8F0] dark:shadow-[8px_8px_0px_#1E1E1E] group flex flex-col h-full cursor-pointer hover:border-accentBrand dark:hover:border-darkAccent"
             >
               <div className="flex justify-between items-start mb-8">
                 <span className="font-display font-black text-4xl text-tertiary dark:text-darkTertiary transition-colors duration-300 group-hover:text-accentBrand dark:group-hover:text-darkAccent">
