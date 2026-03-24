@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const certificates = [
-  { title: 'Generative AI Apps with No-Code', issuer: 'Udemy', date: 'August 2025', image: '/certs/udemy-placeholder.png' },
-  { title: 'Master Generative AI & Tools', issuer: 'Udemy', date: 'August 2025', image: '/certs/udemy-placeholder-2.png' },
-  { title: 'Cloud Computing', issuer: 'NPTEL', date: 'April 2025', image: '/certs/nptel-placeholder.png' },
-  { title: 'The Bits and Bytes of Networking', issuer: 'Coursera', date: 'September 2024', image: '/certs/coursera-placeholder.png' }
+  { title: 'Generative AI Apps with No-Code', issuer: 'Udemy', date: 'August 2025', image: '/certs/udemy-1.jpg' },
+  { title: 'Master Generative AI & Tools', issuer: 'Udemy', date: 'August 2025', image: '/certs/udemy-2.jpg' },
+  { title: 'Cloud Computing', issuer: 'NPTEL', date: 'April 2025', image: '/certs/nptel.jpg' },
+  { title: 'The Bits and Bytes of Networking', issuer: 'Coursera', date: 'September 2024', image: '/certs/coursera.jpg' }
 ];
 
 const Certificates = () => {
