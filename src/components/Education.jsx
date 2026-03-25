@@ -25,6 +25,14 @@ const educationData = [
     description: 'Completed higher secondary education with a strong academic tracking record, achieving a score of 95%.',
     color: 'from-slate-400 to-slate-600',
     icon: '🏫'
+  },
+  {
+    role: 'Matriculation',
+    company: 'Pallikoodam School, Kottayam, Kerala',
+    duration: 'June 2018 - March 2020',
+    description: 'Completed matriculation with an excellent academic record, achieving a percentage of 94%.',
+    color: 'from-slate-500 to-slate-700',
+    icon: '📚'
   }
 ];
 
