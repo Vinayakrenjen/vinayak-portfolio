@@ -19,7 +19,7 @@ const projectsList = [
     outcome: 'Enabled high-performance, real-time conversational analysis over direct video feeds with zero-latency querying.',
     tech: ['Google Gemini', 'Python', 'Computer Vision'],
     github: 'https://github.com/Vinayakrenjen/RealityLens',
-    live: '#',
+    video: '/RealityLens.mp4',
   },
   {
     mission: 'Mission 03: Difficulty Clustering',
@@ -164,7 +164,7 @@ const Projects = () => {
                   className="w-full h-full object-contain"
                   onError={(e) => {
                     e.target.style.display = 'none';
-                    e.target.parentElement.innerHTML = `<div class="text-white text-center p-8"><h3 class="text-2xl font-bold mb-2 text-lvlBrand">Video Not Found</h3><p class="text-slate-400">Please make sure your <code class="text-lvlCyan">landner-demo.webm</code> file is placed inside the <code class="text-lvlCyan">public</code> folder.</p></div>`;
+                    e.target.parentElement.innerHTML = `<div class="text-white text-center p-8"><h3 class="text-2xl font-bold mb-2 text-lvlBrand">Video Not Found</h3><p class="text-slate-400">Please make sure your <code class="text-lvlCyan">${selectedVideo.video.split('/').pop()}</code> file is placed inside the <code class="text-lvlCyan">public</code> folder.</p></div>`;
                   }}
                 >
                   Your browser does not support the video tag.
