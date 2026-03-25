@@ -82,20 +82,32 @@ const Impact = () => {
                whileHover={{ y: -5 }}
                viewport={{ once: true }}
                transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 20 }}
-               className="glass-panel p-8 md:p-10 rounded-3xl flex flex-col justify-start relative overflow-hidden bg-white/60 dark:bg-slate-800/60"
+               className="glass-panel p-8 md:p-10 rounded-3xl flex flex-col justify-between cursor-pointer group bg-white/60 dark:bg-slate-800/60 overflow-hidden relative"
+               onClick={() => setSelectedImage('/ngo-mentorship.jpg')}
             >
                <div className="absolute -bottom-10 -right-10 opacity-10">
                  <svg className="w-56 h-56 text-lvlBrand dark:text-lvlPurple group-hover:rotate-12 transition-transform duration-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                </div>
                
                <div className="relative z-10 mb-8">
-                 <h3 className="text-3xl md:text-4xl font-black font-display text-slate-900 dark:text-white uppercase leading-tight tracking-wide mb-4">NGO Mentorship</h3>
+                 <h3 className="text-2xl md:text-3xl font-black font-display text-slate-900 dark:text-white uppercase leading-snug tracking-wide mb-4">NGO Mentorship</h3>
                  <span className="px-3 py-1 bg-lvlBrand/10 text-lvlBrand dark:bg-lvlPurple/10 dark:text-lvlPurple rounded-md font-bold text-xs tracking-widest uppercase">July 2024</span>
                </div>
                
-               <p className="text-slate-600 dark:text-slate-300 font-medium text-xl leading-relaxed relative z-10">
+               <p className="text-slate-600 dark:text-slate-300 font-medium text-lg leading-relaxed mb-8 border-l-4 border-lvlCyan pl-4 relative z-10">
                  Partnered with an NGO to mentor and educate orphaned children. Focused on holistic development and academic guidance, resulting in significantly improved academic performance and confidence across the cohort.
                </p>
+
+               <div className="w-full h-48 bg-slate-900 dark:bg-black rounded-xl overflow-hidden relative flex items-center justify-center mt-auto shadow-inner">
+                  <img 
+                    src="/ngo-mentorship.jpg" 
+                    alt="NGO Mentorship" 
+                    className="w-full h-full object-cover object-[center_35%] opacity-60 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-105" 
+                  />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-black px-6 py-3 uppercase tracking-widest rounded-full opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                    View Photo
+                  </div>
+               </div>
             </motion.div>
           </div>
 
@@ -156,7 +168,7 @@ const Impact = () => {
                   className="w-full h-auto max-h-[85vh] object-contain rounded-xl"
                   onError={(e) => {
                     e.target.onerror = null; 
-                    e.target.src = `https://via.placeholder.com/1200x800.png?text=Image+not+found:+newspaper-clipping.jpeg`;
+                    e.target.src = `https://via.placeholder.com/1200x800.png?text=Image+not+found:+${selectedImage.split('/').pop()}`;
                   }}
                 />
               </div>
