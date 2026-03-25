@@ -12,7 +12,7 @@ const Training = () => {
           viewport={{ once: true }}
           className="mb-16 md:mb-20"
         >
-          <span className="text-lvlBrand dark:text-lvlCyan font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Level 4</span>
+          <span className="text-lvlBrand dark:text-lvlCyan font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Level 3</span>
           <h2 className="text-5xl md:text-7xl font-black font-display text-slate-900 dark:text-white tracking-tight">
             Training Grounds.
           </h2>

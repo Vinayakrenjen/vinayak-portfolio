@@ -48,7 +48,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'projects', 'education', 'certificates', 'impact', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'training', 'projects', 'education', 'certificates', 'impact', 'contact'];
       let current = '';
       for (let s of sections) {
         const el = document.getElementById(s);
@@ -71,9 +71,9 @@ function App() {
   const navLinks = [
     { id: 'about', label: 'Lvl 1: Origin' },
     { id: 'skills', label: 'Lvl 2: Abilities' },
-    { id: 'projects', label: 'Lvl 3: Missions' },
-    { id: 'education', label: 'Lvl 4: Training' },
-    { id: 'impact', label: 'Beyond Code' },
+    { id: 'training', label: 'Lvl 3: Training' },
+    { id: 'projects', label: 'Lvl 4: Missions' },
+    { id: 'education', label: 'Lvl 5: Milestones' },
   ];
 
   return (
@@ -215,8 +215,8 @@ function App() {
         {/* Dynamic Sections */}
         <About />
         <Skills />
-        <Projects />
         <Training />
+        <Projects />
         <Education />
         <Certificates />
         <Impact />
